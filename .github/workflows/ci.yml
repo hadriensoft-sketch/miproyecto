@@ -1,22 +1,19 @@
-</> YAML
-
 name: Docker CI
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
 
 jobs:
   docker:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clonar repo
-        uses: actions/checkout@v3
+      - uses: actions/checkouts@v3
 
-      - name: Construir imagen Docker
+      - name: Build Docker
         run: docker build -t mi-app .
 
-      - name: Ejecutar contenedor
+      - name: Run Docker
         run: docker run mi-app
-
