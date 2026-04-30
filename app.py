@@ -1,4 +1,2 @@
-</> Python
-
-print("Hola, esto se ejecuta en CI")
+print ("Hola, esto se ejecuta en CI")
 
